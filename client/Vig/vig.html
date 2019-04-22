@@ -1,0 +1,122 @@
+<!DOCTYPE.html>
+
+<html>
+
+	  <body>
+			<link rel = "stylesheet" type = "text/css" href = "vig.css">
+			<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+			<title> Vigenere Cipher </title>
+
+			<h1> Vigenere Encoder </h1> </br> </br> </br>
+
+			<p1> <p> Vigenere Cipher is a method of encrypting alphabetic text. It uses a simple form of polyalphabetic substitution. A polyalphabetic cipher is any cipher based on substitution, using multiple substitution alphabets .The encryption of the original text is done using the Vigenère square or Vigenère table. </p> </p1> </br>
+			<p2> <p> Enter your text in the given box. </p> </p2> </br>
+
+			<form align = "center" >
+
+			<textarea placeholder = "Enter Your Text" id = "txt" rows = "6" cols = "80"> </textarea> </br> </br>
+
+			<p3> <p> Type Your Keywords. </p> </p3>
+			<input type = "text" name = "text"> </input>
+			</br></br>
+			<select>
+				<option value = "0" > Encrypt </option>
+				<option value = "1" > Decrypt </option>
+			</select>
+			</br></br>
+			<button type = "button" onclick = "calc()" class = "btn btn-primary"> Let's Go !!! </button>
+
+
+
+			<div class = "container">
+			<div class = "box">
+			<div class = "icon"><i class="fa fa-home" aria-hidden="true"></i></div>
+			<div class = "content">
+			<h3> <a href = "../Main.html">HOME</a> </h3>
+			<p> Click HOME For Home Page.</p>
+			</div>
+			</div>
+
+			<div class = "box">
+			<div class = "icon"><i class="fa fa-user-secret" aria-hidden="true"></i></div>
+			<div class = "content">
+			<h3> <a href = "../rot13/rot13.html">ROT13</a> </h3>
+			<p> Click ROT13 for Rot13 Encoder.</p>
+			</div>
+			</div>
+
+			<div class = "box">
+			<div class = "icon"><i class="fa fa-user-secret" aria-hidden="true"></i></div>
+			<div class = "content">
+			<h3> <a href = "../ceaser/ceaser.html">CEASER</a> </h3>
+			<p> Click CEASER for Ceaser Encoder.</p>
+			</div>
+			</div>
+
+			<div class = "box">
+			<div class = "icon"><i class="fa fa-github" aria-hidden="true"></i></i></div>
+			<div class = "content">
+			<h3> <a href = "https://github.com/Ihtisham07/chaudhry_ihtisham_set008101_coursework2">GitHub</a> </h3>
+			<p> Click GitHub for my Reporsity. </p>
+			</div>
+			</div>
+
+
+
+
+			<div class = "box">
+			<div class = "icon"><i class="fa fa-user-secret" aria-hidden="true"></i></div>
+			<div class = "content">
+			<h3> <a href = "https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&ct=1555078166&rver=7.0.6730.0&wp=LBI&wreply=https:%2f%2fwww.msn.com%2fen-ae%2fhomepage%2fSecure%2fPassport%3fru%3dhttps%253a%252f%252fwww.msn.com%252fen-ae%252f%253focid%253dmailsignout%2526pfr%253d1&lc=1033&id=1184&mkt=en-ae&pcexp=True">Outlook</a> </h3>
+			<p> Click E-mail for outlook. </p>
+			</div>
+			</div>
+
+
+
+
+			<div class = "box">
+			<div class = "icon"><i class="fa fa-github" aria-hidden="true"></i></i></div>
+			<div class = "content">
+			<h3> <a href = "../signup.html">Logout</a> </h3>
+			<p> Logout </p>
+			</div>
+			</div>
+
+
+
+
+			</div>
+
+
+			<script src="vig.js"></script>
+
+
+			<script>
+			function calc() {
+				var txt = document.querySelector("textarea"),
+				    input = document.querySelector("input"),
+				    cipher = document.querySelector("select").value,
+				    alertblock = document.querySelector(".alert")
+				    alertxt = document.querySelector("#alertxt");
+					try{
+						txt.value = vig(txt.value,input.value,cipher);
+						alertblock.style.display="none";
+					} catch(e) {
+						alertblock.style.display="block";
+						alertxt.innerText=e;
+					}
+			}
+		</script>
+
+
+
+
+			 <p><marquee>&copy; 2019 Web Tech ASSIGMENT Ihtisham Nadeem Chaudhry<marquee><p>
+
+
+			<audio controls autoplay hidden="" autostart = "true" loop = "true" src="C:\Users\Nadeem\Desktop\COURSE WORK WEB TECH 1\FINAL DELIEVERY\af.mp3" type ="audio/mp3""></audio>
+		</body>
+</html>
